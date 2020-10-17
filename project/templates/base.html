@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     {% load static %}
-    {% load template_helpers %}
     {% load bootstrap4 %}
     <head>
         <meta charset="UTF-8">
@@ -9,16 +8,30 @@
         <script type="text/javascript" src="{% static 'jquery.js' %}"></script>
         <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
         <title>{% block title %}My site{%endblock%}</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
-        <script src="{% static 'script.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
+        <script src="{% static 'main.js' %}"></script>
     </head>
 
     <body>
+        <a href="{% url 'main:login'%}?next={{request.path}}">Login</a>
         {% block content %}
 
             
 
         {% endblock %}
+        <footer>
+            <table>
+                <tr align="left">
+                    <th>Документи центру</th><th>Загальні відомості</th><th>Співпраця</th>
+                </tr>
+                <tr><td>Статут центру</td><td>Освітні програми</td><td>Спонсорам</td></tr>
+                <tr><td>Фінансова звітність</td><td>Територія центру</td><td>Обмін досвідом</td></tr>
+                <tr><td>Ручний звіт про діяльність</td><td>Кількість учнів</td></tr>
+                <tr><td>Ліцензії та сертифікати</td><td>Проживання у центрі</td></tr>
+                <tr><td>Матеріально-технічне забезпечення</td><td>Додаткові послуги</td></tr>
+                <tr><td>Результати моніторингу якості освіти</td></tr>
+            </table>
+        </footer>
     </body>
 
 </html>
