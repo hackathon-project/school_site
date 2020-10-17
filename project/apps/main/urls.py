@@ -24,5 +24,6 @@ urlpatterns = [
             template_name='password_change_form.html'
         ),
         name='password_reset'
-    )
+    ),
+    path('index/', views.index, name="index")
 ]

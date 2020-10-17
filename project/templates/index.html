@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="css/font-awesome.min.css" >     
  </head>
  <body>
+        <style>
+          @font-face {
+            font-family: OpenSans;
+            src: url('../apps/main/static/fonts/OpenSans-Italic.ttf');
+          } 
+        </style>
         <header>
             <nav class="navbar navbar-default">
                <div class="container-fluid">
@@ -556,20 +562,36 @@
                  </main>
 
   <!-- FOOTER -->
-  <footer class="container">
-            <table>
-                <tr align="left">
-                    <th>Документи центру</th><th>Загальні відомості</th><th>Співпраця</th>
-                </tr>
-                <tr><td>Статут центру</td><td>Освітні програми</td><td>Спонсорам</td></tr>
-                <tr><td>Фінансова звітність</td><td>Територія центру</td><td>Обмін досвідом</td></tr>
-                <tr><td>Ручний звіт про діяльність</td><td>Кількість учнів</td></tr>
-                <tr><td>Ліцензії та сертифікати</td><td>Проживання у центрі</td></tr>
-                <tr><td>Матеріально-технічне забезпечення</td><td>Додаткові послуги</td></tr>
-                <tr><td>Результати моніторингу якості освіти</td></tr>
-            </table>
-        </footer>
-     
+  <footer>
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <div class="footer-left">
+                <ul>
+                    <li><strong>Документи центру</strong></li>
+                    <li>Статут центру</li>
+                    <li>Фінансова звітність</li>
+                    <li>Ручний звіт про діяльність</li>
+                    <li>Ліцензії та сертифікати</li>
+                    <li>Матеріально-технічне забезпечення</li>
+                    <li>Результати моніторингу якості освіти</li>
+                </ul>
+            </div>
+            <div class="footer-right" align="rightt">
+                <ul>
+                    <li><strong>Співпраця</strong></li>
+                    <li>Спонсорам</li>
+                    <li>Обмін досвідом</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<style>
+  footer{
+    padding: 40px, 0px;
+  }
+</style>
+
  </body>
     
     

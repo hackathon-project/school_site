@@ -14,6 +14,9 @@ def registration(request):
     return render(request, 'registration.html', {'form': UserCreationForm})
 
 
+def index(request):
+    return render(request, 'index.html')
+
 class RegisterFormView(FormView):
     form_class = UserCreationForm
     success_url = 'articles/'
