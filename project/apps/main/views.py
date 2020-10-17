@@ -17,6 +17,27 @@ def registration(request):
 def index(request):
     return render(request, 'index.html')
 
+
+def internat(request):
+    return render(request, 'internat.html')
+
+
+def kindergarten(request):
+    return render(request, 'kindergarten.html')
+
+
+def rehabilitation(request):
+    return render(request, 'rehabilitation.html')
+
+
+def sponsor(request):
+    return render(request, 'internat.html')
+
+
+def vacancies(request):
+    return render(request, 'vacancies.html')
+
+
 class RegisterFormView(FormView):
     form_class = UserCreationForm
     success_url = 'articles/'

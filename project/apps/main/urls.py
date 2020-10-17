@@ -13,6 +13,11 @@ urlpatterns = [
     path('registration/', views.registration, name="registration"),
     path('add_user/', views.RegisterFormView.as_view(), name = "add_user"),
     path('test/', TemplateView.as_view(template_name="test.html")),
+    path('internat/', views.internat, name="internat"),
+    path('kindergarten/', views.kindergarten, name="kindergarten"),
+    path('rehabilitation/', views.rehabilitation, name="rehabilitation"),
+    path('sponsor/', views.sponsor, name="sponsor"),
+    path('vacancies/', views.vacancies, name="vacancies"),
     path('login/', 
         LoginView.as_view(
             template_name='login.html'
