@@ -41,7 +41,7 @@ def vacancies(request):
 
 class RegisterFormView(FormView):
     form_class = UserCreationForm
-    success_url = 'articles/'
+    success_url = 'main/'
     template_name = 'registration.html'
 
     def form_valid(self, form):
