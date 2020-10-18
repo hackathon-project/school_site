@@ -47,7 +47,12 @@
         <li><a href=""id="dok">ДОКУМЕНТИ ЗАКЛАДУ</a></li>
         <li><a href=""id="put">ПИТАННЯ - ВІДПОВІДІ</a></li>
         <li><a href=""id="otr">ОТРИМАТИ КОНСУЛЬТАЦІЮ</a></li>
-        <li><a href=""id="vxi">ВХІД</a></li>
+        <li>{% if user.is_authenticated %}
+              <a href="{% url 'main:logout'%}?next={{request.path}}"id="vxi">ВИХІД</a> 
+            {% else %}
+              <a href="{% url 'main:login'%}?next={{request.path}}"id="vxi">ВХІД</a>
+            {% endif %}
+        </li>
             </ul>
         </nav>
     </div>      
