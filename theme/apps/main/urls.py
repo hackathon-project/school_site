@@ -30,5 +30,6 @@ urlpatterns = [
         ),
         name='password_reset'
     ),
-    path('index/', views.index, name="index")
+    path('index/', views.index, name="index"),
+    path('my/', views.users_page, name="users_page")
 ]
