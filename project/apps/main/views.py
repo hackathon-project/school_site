@@ -50,6 +50,7 @@ class RegisterFormView(FormView):
     def form_invalid(self, form):
         return super(RegisterFormView, self).form_invalid(form)
 
+
 def validate_registration_form(request):
     form = UserCreationForm(request.GET)
     #return HttpResponse(form.is_valid())
@@ -58,8 +59,13 @@ def validate_registration_form(request):
     else:
         return super(RegisterFormView, self).form_invalid(form)
 
+
 def add_user(request):
     f = UserCreationForm(request.POST)
     if f.is_valid():
         f.save()
     return HttpResponseRedirect(reverse('main:test'))
+
+
+def users_page(request):
+    return render(request, 'user.html')
