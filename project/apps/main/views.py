@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import FormView
 from django.db import models
+from django.core import serializers
 from django.contrib.auth.models import User
 
 def test(request):
@@ -69,3 +70,9 @@ def add_user(request):
 
 def users_page(request):
     return render(request, 'user.html')
+
+
+def get_json_users(request):
+    users = [user.username for user in User.objects.all()]
+    #usernames = serializers.serialize(usernames)
+    return HttpResponse(users)
